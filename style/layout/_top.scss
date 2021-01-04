@@ -1,0 +1,104 @@
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $font-libreFranklin;
+  h1 {
+    margin-top: 2rem;
+    font-weight: $font-300;
+    color: $very-dark-blue;
+  }
+  p {
+    margin-top: 1rem;
+    font-size: 1rem;
+    font-weight: $font-600;
+    color: $very-dark-blue;
+  }
+  form {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    .test {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      input[name="email"] {
+        width: 100%;
+        font-family: $font-libreFranklin;
+        border: 1px solid $pale-blue;
+        border-radius: 2rem;
+        padding: 1rem 1.5rem;
+        &::placeholder {
+          font-family: $font-libreFranklin;
+          color: $pale-blue;
+        }
+      }
+    }
+    button {
+      width: 100%;
+      margin-top: 0.8rem;
+      border: 1px solid $blue;
+      color: white;
+      border-radius: 2rem;
+      background-color: $blue;
+      padding: 1rem 1.5rem;
+      box-shadow: 0px 0px 10px 0 hsla(223, 87%, 63%, 0.5);
+      &:hover {
+        cursor: pointer;
+        background-color: hsla(223, 87%, 63%, 0.85);
+        border-color: hsla(223, 87%, 63%, 0.85);
+      }
+    }
+  }
+}
+
+.error {
+  border: 1px solid $light-red !important;
+}
+.no-active {
+  display: none;
+  margin-top: 0.5rem !important;
+  color: $light-red;
+  font-size: 12px !important;
+}
+.active {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .top {
+    h1 {
+      font-size: 2.5rem;
+    }
+    p {
+      font-size: $font-size;
+    }
+    form {
+      margin-top: 1.5rem;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      width: 100%;
+      .test {
+        align-items: flex-start;
+        p {
+          margin-left: 1.5rem;
+        }
+      }
+      button {
+        width: 40%;
+        margin: 0;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+.center {
+  margin: 4rem 0 0;
+  img {
+    width: 100%;
+  }
+}
